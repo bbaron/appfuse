@@ -34,7 +34,7 @@ public class BasePage {
     protected String templateName;
     protected FacesContext facesContext;
     protected String sortColumn;
-    protected boolean ascending;
+    protected boolean ascending = true;
     protected boolean nullsAreHigh;
     
     public FacesContext getFacesContext() {
@@ -227,7 +227,7 @@ public class BasePage {
         this.templateName = templateName;
     }
 
-    // The following methods are used by t:dataTable for sorting.
+    // The following methods are used by p:dataTable for sorting.
     public String getSortColumn() {
         return sortColumn;
     }

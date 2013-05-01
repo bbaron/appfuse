@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="<c:url value="/images/favicon.ico"/>"/>
@@ -13,7 +14,9 @@
     <link rel="stylesheet" type="text/css" media="all" href="<c:url value='/styles/style.css'/>" />
     <decorator:head/>
 
+    <c:if test="${!jqueryProvided}">
     <script type="text/javascript" src="<c:url value='/scripts/lib/jquery-1.8.2.min.js'/>"></script>
+    </c:if>
     <script type="text/javascript" src="<c:url value='/scripts/lib/bootstrap-2.2.1.min.js'/>"></script>
     <script type="text/javascript" src="<c:url value='/scripts/lib/plugins/jquery.cookie.js'/>"></script>
     <script type="text/javascript" src="<c:url value='/scripts/script.js'/>"></script>

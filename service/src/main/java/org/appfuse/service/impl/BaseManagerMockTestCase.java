@@ -4,21 +4,19 @@ import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.appfuse.util.ConvertUtil;
-import org.jmock.Mockery;
-import org.jmock.integration.junit4.JMock;
-import org.jmock.integration.junit4.JUnit4Mockery;
 import org.junit.runner.RunWith;
+import org.mockito.runners.MockitoJUnitRunner;
 
 import java.util.Map;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 /**
- * A mock class for testing using JMock. This test class can be moved to the test tree.
+ * A mock class for testing using Mockito.
  *
  * @author mraible
  */
-@RunWith(JMock.class)
+@RunWith(MockitoJUnitRunner.class)
 public abstract class BaseManagerMockTestCase {
     /**
      * A logger
@@ -28,10 +26,6 @@ public abstract class BaseManagerMockTestCase {
      * The resourceBundle
      */
     protected ResourceBundle rb;
-    /**
-     * The junit 4 context
-     */
-    protected Mockery context = new JUnit4Mockery();
 
     /**
      * Default constructor will set the ResourceBundle if needed.
